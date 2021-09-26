@@ -1,0 +1,41 @@
+@api = http://localhost:4000/products
+
+GET {{api}}
+
+###
+ 
+POST {{api}}
+Content-Type: application/json
+
+{
+    "state": "Liquidado",
+    "holder": "Pedro Perez",
+    "weight": "60kg",
+    "createBy": "Username",
+    "price": "60.000",
+    "priceUnit": "1.000",
+    "address": "calle 77a n 96 11"
+}
+
+###
+
+GET {{api}}/2
+
+###
+
+DELETE {{api}}/2
+
+###
+
+PUT {{api}}/4
+Content-Type: application/json
+
+{
+    "state": "Compra",
+    "holder": "Pedro Perez",
+    "weight": "60kg",
+    "updateBy": "LUIS.CONTRERAS",
+    "price": "60.000",
+    "priceUnit": "1.000",
+    "address": "calle 77a n 96 11"
+}
