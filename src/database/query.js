@@ -6,4 +6,8 @@ export const queries = {
   deleteProductById: "DELETE FROM products WHERE consecutive = @id",
   updateProductById:
     "UPDATE products SET state = @state, holder = @holder, weight = @weight, price = @price, priceUnit = @priceUnit, updateBy = @updateBy, address = @address, updateAt = GETDATE() WHERE consecutive = @id",
+  createUser:
+    "INSERT INTO users (username, password, role, createAt) VALUES (@username, @password, @role, GETDATE())",
+  getUser:
+    "SELECT username, password, role FROM users WHERE username = @username",
 };
